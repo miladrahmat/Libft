@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: mrahmat- < mrahmat-@student.hive.fi >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 13:08:14 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/04/23 12:31:11 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/04/23 14:22:25 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,17 +101,17 @@ char	*ft_strtrim(char const *s1, char const *set)
 		res = ft_strdup(s1);
 		return (res);
 	}
-	while (ft_strchr(set, s1[end] != 0 && end >= 0))
+	while (ft_strchr(set, s1[end]) != 0 && end >= start)
 		end--;
-	res = (char *)malloc(end - start + 1);
-	ft_strlcpy(res, &s1[start], end - start);
+	res = (char *)malloc(end - start + 2);
+	ft_strlcpy(res, &s1[start], end - start + 2);
 	return (res);
 }
 
 #include <stdio.h>
 int	main()
 {
-	char	str[] = "What is that?? What";
+	char	str[] = "What is that?? Whatt";
 	char	ex[] = "What";
 	char	*after;
 
