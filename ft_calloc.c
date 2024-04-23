@@ -6,13 +6,13 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 16:00:22 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/04/22 11:59:17 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/04/23 11:43:51 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
-void	*ft_memset(void *str, int c, size_t len)
+static void	*ft_memset(void *str, int c, size_t len)
 {
 	unsigned int	i;
 
