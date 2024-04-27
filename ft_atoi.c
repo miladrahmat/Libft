@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:00:16 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/04/22 17:19:22 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/04/25 10:18:04 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,28 @@
 int	ft_atoi(const char *str)
 {
 	long	res;
+	long	check;
 	int		sign;
 	int		i;
 
 	res = 0;
 	sign = 1;
 	i = 0;
-	while (str[i] == ' ' || ((str[i] >= 9 && str[i] <= 13)
-			&& (str[i + 1] <= '0' || str[i + 1] >= '9')))
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13) || str[i] == '+')
 		i++;
-	if (str[i++] == '-')
+	if (str[i] == '-')
+	{
 		sign *= -1;
-	else
 		i++;
+	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		res *= 10;
-		res += str[i] - '0';
-		i++;
-		if (res < 0 && sign == 1)
+		check = res * 10 + str[i++] - '0';
+		if (res != check / 10 && sign == 1)
 			return (-1);
-		if (res < 0 && sign == -1)
+		if (res != check / 10 && sign == -1)
 			return (0);
+		res = check;
 	}
 	return ((int)res * sign);
 }
@@ -44,7 +44,7 @@ int	ft_atoi(const char *str)
 #include <stdio.h>
 int main(void)
 {
-    char *s = "-21474836481111111111111111111111111111111111";
+    char *s = "+21474836481111111111111111111111111111111111";
     char *str;
 
     int i = 2;
