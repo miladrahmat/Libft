@@ -6,12 +6,11 @@
 /*   By: mrahmat- < mrahmat-@student.hive.fi >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 14:43:47 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/04/27 12:27:38 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/04/29 09:22:24 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static size_t	count_char(char *s, char c)
 {
@@ -36,7 +35,6 @@ static size_t	count_char(char *s, char c)
 	}
 	if (s[i - 1] == c)
 		count--;
-	printf("Count is: %d\n", count);
 	return (count);
 }
 
@@ -47,7 +45,6 @@ static size_t	word_len(char *s, char c)
 	res = 0;
 	while (s[res] != c && s[res] != '\0')
 		res++;
-	printf("Length of the word is:%d\n", res);
 	return (res);
 }
 
@@ -55,11 +52,9 @@ static char	**free_array(char **array, size_t index)
 {
 	while (index)
 	{
-		printf("index is:%ld\n", index);
 		free(array[index]);
 		index--;
 	}
-	printf("index is:%ld\n", index);
 	free(array[index]);
 	free(array);
 	return (0);
@@ -82,7 +77,6 @@ char	**create_string(char *s, char c, char **array)
 			array[i] = ft_substr((char const *)s, 0, count);
 			if (array[i] == NULL)
 				return (free_array(array, i));
-			printf("Created string:%s\n", array[i]);
 			i++;
 		}
 		while (*s != c && *s != '\0')
@@ -98,24 +92,33 @@ char	**ft_split(char const *s, char c)
 	char			**res;
 
 	if (s == NULL || *s == '\0')
-		return (0);
-	size = count_char((char *)s, c);
-	res = (char **)malloc(size * sizeof(char *) + 1);
-	if (res == NULL)
-		return (NULL);
-	res = create_string((char *)s, c, res);
-	return (res);
+	{
+		res = NULL;
+		return (res);
+	}
+	else
+	{
+		size = count_char((char *)s, c);
+		res = (char **)malloc(size * sizeof(char *) + 1);
+		if (res == NULL)
+			return (NULL);
+		res = create_string((char *)s, c, res);
+		return (res);
+	}
 }
 /* 
+#include <stdio.h>
 int	main()
 {
-	char			*str = "    Hello what's   up   man    ";
+	char			*str = "    HELLO  What    Are You Doing??       ";
 	char			sep = ' ';
 	char			**res;
 	unsigned int	index;
 
 	index = 0;
 	res = ft_split(str, sep);
+	if (res == NULL)
+		return (0);
 	while (res[index] != NULL)
 	{
 		printf("%s\n", res[index]);
