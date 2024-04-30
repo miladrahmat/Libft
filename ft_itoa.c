@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrahmat- < mrahmat-@student.hive.fi >      +#+  +:+       +#+        */
+/*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 09:24:38 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/04/29 11:37:30 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/04/30 10:26:07 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,4 +91,4 @@ int	main()
 	printf("Integer %d converted to %s\n", nbr, res);
 	free(res);
 	return (0);
-}*/
+} */

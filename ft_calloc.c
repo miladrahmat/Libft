@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 16:00:22 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/04/23 11:43:51 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/04/25 14:23:17 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,15 @@ void	*ft_calloc(size_t count, size_t size)
 	void	*ptr;
 
 	ptr = (void *)malloc(count * sizeof(size));
-	if (ptr == 0)
-		return (0);
+	if (ptr == NULL)
+		return (NULL);
 	else
 	{
 		ft_memset(ptr, 0, count);
 		return (ptr);
 	}
 }
+
 /* 
 #include <stdio.h>
 int	main()

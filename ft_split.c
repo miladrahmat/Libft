@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrahmat- < mrahmat-@student.hive.fi >      +#+  +:+       +#+        */
+/*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 14:43:47 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/04/29 09:22:24 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/04/30 10:25:12 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,7 +110,7 @@ char	**ft_split(char const *s, char c)
 #include <stdio.h>
 int	main()
 {
-	char			*str = "    HELLO  What    Are You Doing??       ";
+	char			*str = "  When  you       will be   i   mine??   SOON!!    ";
 	char			sep = ' ';
 	char			**res;
 	unsigned int	index;

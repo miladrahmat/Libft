@@ -6,13 +6,13 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 10:28:25 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/04/19 14:59:38 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/04/25 14:00:28 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
-int	ft_strlen(char *str)
+static size_t	ft_strlen(char *str)
 {
 	int	len;
 
@@ -55,10 +55,10 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 #include <string.h>
 int	main()
 {
-	char	from[] = "What are you talking about??";
-	char	find[] = "talk";
+	char	from[] = "What are you talking abouth?";
+	char	find[] = "?";
 
-	printf("My function: %s\n", ft_strnstr(from, find, 17));
-	printf("OG function: %s\n", strnstr(from, find, 17));
+	printf("My function: %s\n", ft_strnstr(from, find, 28));
+	printf("OG function: %s\n", strnstr(from, find, 28));
 	return (0);
 } */

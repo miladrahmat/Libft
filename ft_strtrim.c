@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrahmat- < mrahmat-@student.hive.fi >      +#+  +:+       +#+        */
+/*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 13:08:14 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/04/23 14:22:25 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/04/23 17:26:09 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,7 +107,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(res, &s1[start], end - start + 2);
 	return (res);
 }
-
+/* 
 #include <stdio.h>
 int	main()
 {
@@ -120,4 +120,4 @@ int	main()
 	printf("After: %s\n", after);
 	free (after);
 	return (0);
-}
+} */
