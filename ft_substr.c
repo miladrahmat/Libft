@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrahmat- < mrahmat-@student.hive.fi >      +#+  +:+       +#+        */
+/*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 12:11:14 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/04/27 11:54:56 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/02 19:15:43 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,15 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char			*res;
 	unsigned int	i;
+	unsigned int	s_len;
 
-	if (start > ft_strlen((char *)s))
-		return (0);
 	i = 0;
-	res = (char *)malloc(len * sizeof(char));
+	s_len = ft_strlen(s);
+	if (start > s_len)
+		len = 0;
+	if (len > s_len)
+		len = s_len - start;
+	res = (char *)malloc((len + 1) * sizeof(char));
 	if (res == NULL)
 		return (NULL);
 	while (i < len)
@@ -36,10 +40,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 #include <stdio.h>
 int	main()
 {
-	char str[] = "Huhuu";
+	char str[] = "hola";
+	char *res;
 
 	printf("Originally it was: %s\n", str);
-	printf("Now it's: %s\n", ft_substr(str, 2, 3));
-	free(str);
+	res = ft_substr(str, 2, 3);
+	printf("Now it's: %s\n", res);
+	free(res);
 	return (0);
 } */
