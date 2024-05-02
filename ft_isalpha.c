@@ -6,16 +6,19 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 09:59:11 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/04/19 10:24:49 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/04/30 14:29:27 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <ctype.h>
 
 int	ft_isalpha(int c)
 {
-	if (((unsigned char)c >= 'A' && (unsigned char)c <= 'Z')
-		|| ((unsigned char)c >= 'a' && (unsigned char)c <= 'z'))
+	if (c > 255)
+		return (0);
+	if (((unsigned char)c >= 65 && (unsigned char)c <= 90)
+		|| ((unsigned char)c >= 97 && (unsigned char)c <= 122))
 		return (1);
 	else
 		return (0);
@@ -26,7 +29,13 @@ int	main()
 {
 	int	test;
 
-	test = 'a';
-	printf("%d\n", ft_isalpha(test));
+	test = 200;
+	while (test < 400)
+	{
+		printf("test value: %d\n", test);
+		printf("mine: %d\n", ft_isalpha(test));
+		printf("original: %d\n\n\n", isalpha(test));
+		test++;
+	}
 	return (0);
 } */

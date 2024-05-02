@@ -6,13 +6,13 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 11:44:39 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/04/30 10:28:05 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/02 17:01:32 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char*))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
 	unsigned int	size;
@@ -25,7 +25,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char*))
 		return (NULL);
 	while (s[i] != '\0')
 	{
-		res[i] = (f)(i, (char *)s);
+		res[i] = f(i, s[i]);
 		i++;
 	}
 	res[i] = '\0';

@@ -6,51 +6,39 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 16:00:22 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/04/25 14:23:17 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/02 16:38:18 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-static void	*ft_memset(void *str, int c, size_t len)
-{
-	unsigned int	i;
-
-	i = 0;
-	while (i < len && ((unsigned char *)str)[i] != '\0')
-	{
-		((unsigned char *)str)[i] = (unsigned char)c;
-		i++;
-	}
-	return (str);
-}
+#include "libft.h"
+#include <limits.h>
 
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 
-	ptr = (void *)malloc(count * sizeof(size));
+	ptr = (void *)malloc(count * size);
 	if (ptr == NULL)
 		return (NULL);
 	else
 	{
-		ft_memset(ptr, 0, count);
+		ft_memset(ptr, 0, count * size);
 		return (ptr);
 	}
 }
-
 /* 
 #include <stdio.h>
 int	main()
 {
 	char	*str;
-	char	from[] = "Hello World!";
+	char	from[] = "";
 	int		i;
+	int		size;
 	
-	i = 0;
-	while (from[i] != '\0')
-		i++;
-	str = (char *)ft_calloc(i, sizeof(char));
+	size = 0;
+	while (from[size] != '\0')
+		size++;
+	str = (char *)ft_calloc(size, sizeof(char));
 	i = 0;
 	while (from[i] != '\0')
 	{

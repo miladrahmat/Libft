@@ -6,52 +6,55 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 10:20:42 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/04/23 10:47:49 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/02 11:38:27 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_strlen(char *str)
-{
-	unsigned int	len;
-
-	len = 0;
-	while (str[len] != '\0')
-		len++;
-	return (len);
-}
-
-size_t	ft_strlcat(char *dst, char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	unsigned int	i;
 	unsigned int	dst_len;
 	unsigned int	src_len;
+	unsigned int	res;
 
-	src_len = ft_strlen(src);
+	src_len = ft_strlen((char *)src);
 	dst_len = ft_strlen(dst);
 	i = 0;
+	res = 0;
 	if (src_len == 0)
 		return (dst_len);
-	while (i < (dstsize - dst_len - 1) && src[i] != '\0')
+	if (dstsize > dst_len)
+		res = src_len + dst_len;
+	else
+		res = src_len + dstsize;
+	while ((dst_len + 1) < dstsize && src[i] != '\0')
 	{
-		dst[dst_len + i] = src[i];
+		dst[dst_len] = ((char *)src)[i];
 		i++;
+		dst_len++;
 	}
-	dst[dst_len + i] = '\0';
-	return (dst_len + src_len);
+	dst[dst_len] = '\0';
+	return (res);
 }
 /* 
 #include <stdio.h>
 #include <string.h>
 int	main()
 {
-	char	src[] = "";
-	char	dst[20] = "Hellooooooo";
+	char	src[] = " Hive!";
+	char	dst[20] = "Hello";
+	char	src1[] = " Hive!";
+	char	dst1[20] = "Hello";
 
-	printf("source before: %s\n", src);
+	printf("\nMy function:\nsource before: %s\n", src);
 	printf("destination before: %s\n", dst);
-	printf("return value: %lu\n", ft_strlcat(dst, src, 20));
-	printf("destination after: %s\n", dst);
+	printf("return value: %lu\n", ft_strlcat(dst, src, 6));
+	printf("destination after: %s\n\n", dst);
+	printf("OG function:\nsource before: %s\n", src1);
+	printf("destination before: %s\n", dst1);
+	printf("return value: %lu\n", strlcat(dst1, src1, 6));
+	printf("destination after: %s\n\n", dst1);
 	return (0);
 } */

@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 11:50:09 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/04/19 10:27:49 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/02 18:38:16 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 
 int	ft_toupper(int c)
 {
+	if (c > 255)
+		return (-1);
 	if ((unsigned char)c >= 97 && (unsigned char)c <= 122)
-		return ((unsigned char)c - 32);
+		return (c - 32);
 	else
-		return ((unsigned char)c);
+		return (c);
 }
 /* 
 #include <stdio.h>

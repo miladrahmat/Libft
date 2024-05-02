@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 12:20:50 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/04/19 10:26:08 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/02 18:38:50 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 
 int	ft_tolower(int c)
 {
+	if (c > 255)
+		return (-1);
 	if ((unsigned char)c >= 65 && (unsigned char)c <= 90)
-		return ((unsigned char)c + 32);
+		return (c + 32);
 	else
-		return ((unsigned char)c);
+		return (c);
 }
 /* 
 #include <stdio.h>

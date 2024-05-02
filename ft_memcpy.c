@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 12:37:40 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/04/22 17:19:35 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/02 10:56:28 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	unsigned int	i;
 
 	i = 0;
-	while (n > 0 && ((char *)src)[i] != '\0' && ((char *)dst)[i] != '\0')
+	if (dst == NULL && src == NULL)
+		return (dst);
+	while (n > 0)
 	{
 		((char *)dst)[i] = ((char *)src)[i];
 		i++;

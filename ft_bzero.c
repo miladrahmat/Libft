@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 11:37:39 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/04/19 10:24:29 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/02 10:38:25 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_bzero(void *str, size_t n)
 	i = 0;
 	if (n == 0)
 		return ;
-	while (n != 0 && ((unsigned char *)str)[i] != '\0')
+	while (n != 0)
 	{
 		((unsigned char *)str)[i] = 0;
 		i++;

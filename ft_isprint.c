@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 17:39:53 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/04/19 10:25:08 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/04/30 14:27:05 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 int	ft_isprint(int c)
 {
-	if ((unsigned char)c >= ' ' && (unsigned char)c <= '~')
+	if (c > 255)
+		return (0);
+	if ((unsigned char)c >= 32 && (unsigned char)c <= 126)
 		return (1);
 	else
 		return (0);

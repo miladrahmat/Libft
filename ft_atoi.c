@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:00:16 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/04/25 10:45:35 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/02 10:50:47 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ int	ft_atoi(const char *str)
 	res = 0;
 	sign = 1;
 	i = 0;
-	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13) || str[i] == '+')
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
 		i++;
-	if (str[i] == '-')
+	if (str[i] == '-' || str[i] == '+')
 	{
-		sign *= -1;
-		i++;
+		if (str[i++] == '-')
+			sign *= -1;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
@@ -64,7 +64,7 @@ int main(void)
 #include <stdio.h>
 int	main()
 {
-	char str[] = "-21474836482222222222222222222";
+	char str[] = "+ 214";
 
 	printf("My function: %d\n", ft_atoi(str));
 	printf("OG function: %d\n", atoi(str));

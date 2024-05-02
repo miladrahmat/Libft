@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 10:33:33 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/04/30 11:18:13 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/02 17:24:35 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,23 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	unsigned int	loc;
 	unsigned int	index;
 
-	loc = 0;
 	index = 0;
-	while (s[loc] != '\0')
+	while (s[index] != '\0')
 	{
-		(f)(index, &s[loc]);
-		loc++;
+		f(index, &s[index]);
+		index++;
 	}
 }
 /* 
 #include <stdio.h>
 static void	ft_isalphax(unsigned int index, char *c)
 {
-	if ((c[index] >= 'A' && c[index] <= 'Z')
-		|| (c[index] >= 'a' && c[index] <= 'z'))
-		printf("%c", c[index]);
+	(void)index;
+	if ((*c >= 'A' && *c <= 'Z')
+		|| (*c >= 'a' && *c <= 'z'))
+		printf("%c", *c);
 }
 
 int	main()
