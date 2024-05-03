@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 14:43:47 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/04/30 10:25:12 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/03 11:46:48 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,35 +17,28 @@ static size_t	count_char(char *s, char c)
 	unsigned int	count;
 	unsigned int	i;
 
+	count = 0;
 	i = 0;
-	count = 1;
-	while (s[i] == c && s[i] != '\0')
-		i++;
 	while (s[i] != '\0')
 	{
-		if (s[i] == c && s[i + 1] == c)
+		while (s[i] == c && s[i] != '\0')
 			i++;
-		if (s[i] == c && s[i + 1] != c)
-		{
+		if (s[i] != c && s[i] != '\0')
 			count++;
-			i++;
-		}
-		else
+		while (s[i] != c && s[i] != '\0')
 			i++;
 	}
-	if (s[i - 1] == c)
-		count--;
 	return (count);
 }
 
 static size_t	word_len(char *s, char c)
 {
-	unsigned int	res;
+	unsigned int	len;
 
-	res = 0;
-	while (s[res] != c && s[res] != '\0')
-		res++;
-	return (res);
+	len = 0;
+	while (s[len] != c && s[len] != '\0')
+		len++;
+	return (len);
 }
 
 static char	**free_array(char **array, size_t index)
@@ -63,18 +56,18 @@ static char	**free_array(char **array, size_t index)
 char	**create_string(char *s, char c, char **array)
 {
 	unsigned int	i;
-	unsigned int	count;
+	unsigned int	len;
 
 	i = 0;
-	count = 0;
+	len = 0;
 	while (*s != '\0')
 	{
 		while (*s == c && *s != '\0')
 			s++;
 		if (*s != c && *s != '\0')
 		{
-			count = word_len((char *)s, c);
-			array[i] = ft_substr((char const *)s, 0, count);
+			len = word_len((char *)s, c);
+			array[i] = ft_substr((char const *)s, 0, len);
 			if (array[i] == NULL)
 				return (free_array(array, i));
 			i++;
@@ -82,43 +75,38 @@ char	**create_string(char *s, char c, char **array)
 		while (*s != c && *s != '\0')
 			s++;
 	}
-	array[i] = NULL;
+	array[i] = 0;
 	return (array);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	unsigned int	size;
-	char			**res;
+	char			**array;
 
-	if (s == NULL || *s == '\0')
-	{
-		res = NULL;
-		return (res);
-	}
+	if (s == NULL)
+		return (NULL);
 	else
 	{
 		size = count_char((char *)s, c);
-		res = (char **)malloc(size * sizeof(char *) + 1);
-		if (res == NULL)
+		array = (char **)malloc((size + 1) * sizeof(char *));
+		if (array == NULL)
 			return (NULL);
-		res = create_string((char *)s, c, res);
-		return (res);
+		array = create_string((char *)s, c, array);
+		return (array);
 	}
 }
 /* 
 #include <stdio.h>
 int	main()
 {
-	char			*str = "  When  you       will be   i   mine??   SOON!!    ";
+	char			*str = "                 ";
 	char			sep = ' ';
 	char			**res;
 	unsigned int	index;
 
 	index = 0;
 	res = ft_split(str, sep);
-	if (res == NULL)
-		return (0);
 	while (res[index] != NULL)
 	{
 		printf("%s\n", res[index]);
