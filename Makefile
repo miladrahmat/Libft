@@ -8,19 +8,20 @@ SOURCES = \
 		ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c
 BSOURCES = \
 		ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c \
-		ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c
+		ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c \
+		ft_lstmap_bonus.c
 OBJECTS = $(SOURCES:.c=.o)
 BOBJECTS = $(BSOURCES:.c=.o)
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 #The $@ means the filename representing the target (NAME)
 #The $? means the names of all the files? (if I understood correctly)
 $(NAME): $(OBJECTS)
-		$(AR) -r $@ $?
+		ar rcs $@ $?
 bonus: $(OBJECTS) $(BOBJECTS)
-	$(AR) -r $(NAME) $(OBJECTS) $(BOBJECTS)
+	@ar rcs $(NAME) $(OBJECTS) $(BOBJECTS)
 %.o: %.c
 		$(CC) -c $(CFLAGS) $?
 clean:
