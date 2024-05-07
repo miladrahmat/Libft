@@ -45,3 +45,24 @@ In the project you implement some of the standard C library functions and some a
 |**ft_strtrim**|allocates and returns a copy of `s1` with the characters specified in `set` removed from the beginning and the end of the string|returns the trimmed string or NULL if the allocation fails|
 |**ft_split**|allocates and returns an array of strings obtained by splitting the string using the character `c` as a delimiter and NULL terminates the array|retrurns the array of new strings resulting from the split or NULL if the allocation fails|
 |**ft_itoa**|allocates and returns a string representing the integer received as an argument|returns the string representing the integer or NULL if the allocation fails|
+|**ft_strmapi**|applies the function `f` to each character of the string `s`, and passing its first index as argument to allocate and create a new string resulting from the successive applications of `f`|returns the string crated from the successive applications of `f` or NULL if the allocation fails|
+|**ft_striteri**|applies the function `f` on each character of the string passed as argument, passing its index as first argument||
+|**ft_putchar_fd**|outputs the character `c` to the given file descriptor||
+|**ft_putstr_fd**|outputs the string `s` to the given file descriptor||
+|**ft_putendl_fd**|outputs the string `s` to the given file descriptor followed by a newline||
+|**ft_putnbr_fd**|outputs the integer `n` to the given file descriptor||
+
+
+### Bonus functions:
+
+| Function name    | Description                                    | Return values                                                           |
+|------------------|------------------------------------------------|-------------------------------------------------------------------------
+|**ft_lstnew**|allocates and returns a new node. The member variable `content` is initialized with the value of the parameter `content`. The variable `next` is initialized to NULL|returns the new node|
+|**ft_lstadd_front**|adds the node `new` at the beginning of the list||
+|**ft_lstsize**|counts the number of nodes in a list|returns the length of the list|
+|**ft_lstlast**|returns the last node of the list|returns the last node of the list|
+|**ft_lstadd_back**|adds the node `new` at the end of the list||
+|**ft_lstdelone**|takes as a parameter a node and frees the memory of the node's content using the function `del` given as a parameter and free the node||
+|**ft_lstclear**|deletes and frees the given node and every successor of that node, using the function `del` and `free`||
+|**ft_lstiter**|iterates the list `lst` and appllies the function `f` on the content of each node||
+|**ft_lstmap**|iterates the list `lst` and applies the function `f` on the content of each node. Creates a new list resulting of the successive applications of the function `f`|returns the new list or NULL if the allocation fails|
