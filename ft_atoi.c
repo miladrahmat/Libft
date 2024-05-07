@@ -6,11 +6,11 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:00:16 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/05/02 10:50:47 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/07 17:25:10 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libc.h"
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

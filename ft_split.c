@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 14:43:47 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/05/03 11:46:48 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/07 17:25:24 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ static char	**free_array(char **array, size_t index)
 	return (0);
 }
 
-char	**create_string(char *s, char c, char **array)
+static char	**create_string(char *s, char c, char **array)
 {
 	unsigned int	i;
 	unsigned int	len;
