@@ -29,7 +29,7 @@ I redid a set of functions from `libc`, the functions have the same prototypes a
 |[**ft_isalpha**](https://github.com/miladrahmat/Libft/blob/master/ft_isalpha.c)|tests for any alphabetical characters: `a` to `z` and `A` to `Z`| returns zero if character tests false and non-zero if character tests true|
 |[**ft_isdigit**](https://github.com/miladrahmat/Libft/blob/master/ft_isdigit.c)|tests for a decimal digit character: `1`, `2`, `3`, `4`, `5`,  `6`, `7`, `8` and `9`| retruns zero if the character tests false and non-zero if the character tests true|
 |[**ft_isalnum**](https://github.com/miladrahmat/Libft/blob/master/ft_isalnum.c)|tests for any character for which **ft_isalpha** or **ft_isdigit** is true|returns zero if the character tests false and non-zero if the character tests true|
-|[**ft_isascii**](https://github.com/miladrahmat/Libft/blob/master/ft_ascii.c)|tests for an ASCII character|returns zero if the character tests false and non-zero if the character tests true|
+|[**ft_isascii**](https://github.com/miladrahmat/Libft/blob/master/ft_isascii.c)|tests for an ASCII character|returns zero if the character tests false and non-zero if the character tests true|
 |[**ft_isprint**](https://github.com/miladrahmat/Libft/blob/master/ft_isprint.c)|tests for any printable character in the ASCII table (including `space`)|returns zero if the character tests false and non-zero if the character tests true|
 |[**ft_strlen**](https://github.com/miladrahmat/Libft/blob/master/ft_strlen.c)|computes the length of the given string|returns the number of characters that precede the terminating NULL character `\0`|
 |[**ft_memset**](https://github.com/miladrahmat/Libft/blob/master/ft_memset.c)|writes `len` bytes of value `c` to the string `str`|returns the string `str`|
@@ -92,7 +92,7 @@ The members of the `t_list` struct are:
 |[**ft_lstsize**](https://github.com/miladrahmat/Libft/blob/master/ft_lstsize_bonus.c)|counts the number of nodes in a list|returns the length of the list|
 |[**ft_lstlast**](https://github.com/miladrahmat/Libft/blob/master/ft_lstlast_bonus.c)|returns the last node of the list|returns the last node of the list|
 |[**ft_lstadd_back**](https://github.com/miladrahmat/Libft/blob/master/ft_lstadd_back_bonus.c)|adds the node `new` at the end of the list||
-|**ft_lstdelone**|takes as a parameter a node and frees the memory of the node's content using the function `del` given as a parameter and free the node||
+|[**ft_lstdelone**](https://github.com/miladrahmat/Libft/blob/master/ft_lstdelone_bonus.c)|takes as a parameter a node and frees the memory of the node's content using the function `del` given as a parameter and free the node||
 |[**ft_lstclear**](https://github.com/miladrahmat/Libft/blob/master/ft_lstclear_bonus.c)|deletes and frees the given node and every successor of that node, using the function `del` and `free`||
 |[**ft_lstiter**](https://github.com/miladrahmat/Libft/blob/master/ft_lstiter_bonus.c)|iterates the list `lst` and appllies the function `f` on the content of each node||
 |[**ft_lstmap**](https://github.com/miladrahmat/Libft/blob/master/ft_lstmap_bonus.c)|iterates the list `lst` and applies the function `f` on the content of each node. Creates a new list resulting of the successive applications of the function `f`|returns the new list or **NULL** if the allocation fails|
