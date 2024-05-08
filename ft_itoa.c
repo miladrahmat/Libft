@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 09:24:38 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/05/08 10:34:45 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/08 15:42:06 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 static size_t	check_size(int n)
 {
-	int	check;
 	int	temp;
 	int	count;
 
 	temp = n;
-	check = 0;
 	count = 0;
 	if (temp == -2147483648)
 	{
@@ -33,10 +31,8 @@ static size_t	check_size(int n)
 	}
 	while (temp >= 10)
 	{
-		check += temp % 10;
-		temp = temp / 10;
-		check = check * 10;
 		count++;
+		temp = temp / 10;
 	}
 	return (count + 1);
 }
