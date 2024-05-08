@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 10:20:42 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/05/02 11:38:27 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/08 10:32:39 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,23 +38,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[dst_len] = '\0';
 	return (res);
 }
-/* 
-#include <stdio.h>
-#include <string.h>
-int	main()
-{
-	char	src[] = " Hive!";
-	char	dst[20] = "Hello";
-	char	src1[] = " Hive!";
-	char	dst1[20] = "Hello";
-
-	printf("\nMy function:\nsource before: %s\n", src);
-	printf("destination before: %s\n", dst);
-	printf("return value: %lu\n", ft_strlcat(dst, src, 6));
-	printf("destination after: %s\n\n", dst);
-	printf("OG function:\nsource before: %s\n", src1);
-	printf("destination before: %s\n", dst1);
-	printf("return value: %lu\n", strlcat(dst1, src1, 6));
-	printf("destination after: %s\n\n", dst1);
-	return (0);
-} */

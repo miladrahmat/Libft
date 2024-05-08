@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 14:43:47 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/05/07 17:25:24 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/08 10:33:06 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,22 +96,3 @@ char	**ft_split(char const *s, char c)
 		return (array);
 	}
 }
-/* 
-#include <stdio.h>
-int	main()
-{
-	char			*str = "                 ";
-	char			sep = ' ';
-	char			**res;
-	unsigned int	index;
-
-	index = 0;
-	res = ft_split(str, sep);
-	while (res[index] != NULL)
-	{
-		printf("%s\n", res[index]);
-		index++;
-	}
-	free_array(res, index);
-	return (0);
-} */

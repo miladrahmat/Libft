@@ -47,7 +47,7 @@ I redid a set of functions from `libc`, the functions have the same prototypes a
 |[**ft_strnstr**](https://github.com/miladrahmat/Libft/blob/master/ft_strnstr.c)|locates the first occurance of the string `needle` in the string `haystack` (no more than `len` characters are searched)|if `needle` is an empty string, `haystack` is returned. If `needle` occurs nowhere in `haystack`, **NULL** is returned. Otherwise a pointer to the first character of the first occurance of `needle` is returned|
 |[**ft_atoi**](https://github.com/miladrahmat/Libft/blob/master/ft_atoi.c)|converts the initial portion of the string `str` to `int` representation||
 |[**ft_calloc**](https://github.com/miladrahmat/Libft/blob/master/ft_calloc.c)|contiguously allocates enough space for `count` objects that are `size` bytes of memory|returns a pointer to the allocated memory|
-|[**ft_strdup**](https://github.com/miladrahmat/Libft/blob/master/ft_strdup.c)|allocates sufficient memory for a copy of the string `s1` and does the copy|returns a pointer to the new string (can be used as an argument for `free`|
+|[**ft_strdup**](https://github.com/miladrahmat/Libft/blob/master/ft_strdup.c)|allocates sufficient memory for a copy of the string `s1` and does the copy|returns a pointer to the new string (can be used as an argument for `free`)|
 
 
 ### Additional functions

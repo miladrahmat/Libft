@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 11:44:39 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/05/06 17:29:50 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/08 10:32:15 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,16 +33,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	res[i] = '\0';
 	return (res);
 }
-/* 
-#include <stdio.h>
-int	main()
-{
-	char	*str = "heLLo worLd";
-	char	*res;
-
-	res = ft_strmapi(str, ft_toupper);
-	printf("Original string: %s\n", str);
-	printf("New string %s\n", res);
-	free(res);
-	return (0);
-} */

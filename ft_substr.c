@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 12:11:14 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/05/03 10:02:24 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/08 10:31:44 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,16 +36,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	res[i] = '\0';
 	return (res);
 }
-/* 
-#include <stdio.h>
-int	main()
-{
-	char str[] = "hola";
-	char *res;
-
-	printf("Originally it was: %s\n", str);
-	res = ft_substr(str, 2, 3);
-	printf("Now it's: %s\n", res);
-	free(res);
-	return (0);
-} */

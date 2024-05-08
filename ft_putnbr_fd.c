@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 11:47:56 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/04/30 12:18:32 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/08 10:33:20 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,3 @@ void	ft_putnbr_fd(int n, int fd)
 		res = (n % 10) + '0';
 	ft_putchar_fd(res, fd);
 }
-/* 
-int	main()
-{
-	int	nbr = 0;
-
-	ft_putnbr_fd(nbr, 1);
-	return (0);
-} */

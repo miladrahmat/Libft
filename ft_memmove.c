@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 14:22:35 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/05/02 10:34:31 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/08 10:34:12 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,17 +37,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-/* 
-#include <stdio.h>
-#include <string.h>
-int	main()
-{
-	char strs[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '\0'};
-	//char	strs[] = "Hello World!";
-	//char	strd[100];
-
-	printf("Before: %s ", strs);
-	memmove((char *)&strs[5], (char *)&strs[3], 5);
-	printf("After: %s\n", strs);
-	return (0);
-} */

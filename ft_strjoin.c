@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 12:23:41 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/05/02 12:59:56 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/08 10:32:44 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,16 +38,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	new[new_i] = '\0';
 	return (new);
 }
-/* 
-#include <stdio.h>
-int	main()
-{
-	char	str[] = "Hello";
-	char	str2[] = " World!";
-	char	*res;
-
-	res = ft_strjoin(str, str2);
-	printf("%s\n", res);
-	free (res);
-	return (0);
-} */

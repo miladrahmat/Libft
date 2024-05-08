@@ -6,11 +6,9 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 12:28:58 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/04/19 10:25:42 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/08 10:33:00 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -36,14 +34,3 @@ char	*ft_strchr(const char *s, int c)
 	else
 		return (0);
 }
-/* 
-#include <stdio.h>
-#include <string.h>
-int	main()
-{
-	char	str[] = "Hello World!";
-
-	printf("My function %s\n", ft_strchr(str, 'o'));
-	printf("OG function %s\n", strchr(str, 'o'));
-	return (0);
-} */

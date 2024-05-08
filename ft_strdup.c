@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 11:43:04 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/05/02 12:21:31 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/08 10:32:55 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,3 @@ char	*ft_strdup(const char *s1)
 	s2[i] = '\0';
 	return (s2);
 }
-/* 
-#include <stdio.h>
-int	main()
-{
-	char org[] = "Hello World!";
-	char *new;
-
-	new = ft_strdup(org);
-	printf("Original: %s\n", org);
-	printf("New: %s\n", new);
-	free(new);
-	return (0);
-} */

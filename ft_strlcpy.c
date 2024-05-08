@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 09:51:55 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/04/30 13:54:42 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/08 10:32:31 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,16 +30,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (src_size);
 }
-/* 
-#include <stdio.h>
-#include <string.h>
-int	main()
-{
-	char	src[] = "Hello";
-	char	dst[10];
-
-	printf("Source: %s\n", src);
-	printf("Return value: %lu\n", strlcpy(dst, src, 5));
-	printf("Destination: %s\n", dst);
-	return (0);
-} */

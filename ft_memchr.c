@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:29:19 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/05/02 17:55:23 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/08 10:58:42 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-/* 
-#include <stdio.h>
-#include <string.h>
-int	main()
-{
-	char	str[] = "Hello World!";
-
-	printf("My function: %s\n", ft_memchr(str, 0, 0));
-	printf("OG function: %s\n", memchr(str, 0, 0));
-	return (0);
-} */

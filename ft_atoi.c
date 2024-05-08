@@ -6,11 +6,9 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:00:16 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/05/07 17:25:10 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/08 10:35:27 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
@@ -40,33 +38,3 @@ int	ft_atoi(const char *str)
 	}
 	return ((int)res * sign);
 }
-/* 
-#include <stdio.h>
-int main(void)
-{
-    char *s = "+21474836481111111111111111111111111111111111";
-    char *str;
-
-    int i = 2;
-    while (i < 40)
-    {
-        str = malloc(i + 1);
-        memcpy(str, s, i);
-        str[i] = 0;
-        printf("%s\n", str);
-        printf("original: %i\n", atoi(str));
-        printf("mine: %i\n\n", ft_atoi(str));
-        free(str);
-        i++;
-    }
-} */
-/* 
-#include <stdio.h>
-int	main()
-{
-	char str[] = "+ 214";
-
-	printf("My function: %d\n", ft_atoi(str));
-	printf("OG function: %d\n", atoi(str));
-	return (0);
-} */

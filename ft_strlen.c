@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 17:54:42 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/05/02 18:21:08 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/08 10:36:22 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,3 @@ size_t	ft_strlen(const char *str)
 		len++;
 	return (len);
 }
-/*
-#include <stdio.h>
-int	main()
-{
-	char	*str;
-
-	str = "hellohello";
-	printf("%d\n", ft_strlen(str));
-	return (0);
-}
-*/

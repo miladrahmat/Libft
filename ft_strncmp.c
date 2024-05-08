@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 13:46:55 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/05/02 12:10:55 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/08 10:32:11 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return ((int)str1[i] - (int)str2[i]);
 	return (0);
 }
-/* 
-#include <stdio.h>
-#include <string.h>
-int	main()
-{
-	char	str1[] = "\x12\xff\x65\x12\xbd\xde\xad";
-	char	str2[] = "\x12\x02";
-
-	printf("My function: %d\n", ft_strncmp(str1, str2, 5));
-	printf("OG function: %d\n", strncmp(str1, str2, 5));
-	return (0);
-} */

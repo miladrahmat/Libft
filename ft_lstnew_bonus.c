@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 12:00:17 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/05/03 13:55:50 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/06 11:54:14 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ t_list	*ft_lstnew(void *content)
 	if (node == NULL)
 		return (NULL);
 	node->content = content;
-	node ->next = NULL;
+	node->next = NULL;
 	return (node);
 }

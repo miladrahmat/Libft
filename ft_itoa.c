@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 09:24:38 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/04/30 10:26:07 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/08 10:34:45 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,15 +80,3 @@ char	*ft_itoa(int n)
 	res = converter(n, size, res);
 	return (res);
 }
-/* 
-#include <stdio.h>
-int	main()
-{
-	int	nbr = -1111111111;
-	char *res;
-
-	res = ft_itoa(nbr);
-	printf("Integer %d converted to %s\n", nbr, res);
-	free(res);
-	return (0);
-} */

@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 13:08:14 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/05/02 13:59:55 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/08 10:31:56 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,17 +40,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(res, &s1[start], end - start + 2);
 	return (res);
 }
-/* 
-#include <stdio.h>
-int	main()
-{
-	char	str[] = """;
-	char	ex[] = "";
-	char	*after;
-
-	printf("Before: %s\n", str);
-	after = ft_strtrim(str, ex);
-	printf("After: %s\n", after);
-	free (after);
-	return (0);
-} */

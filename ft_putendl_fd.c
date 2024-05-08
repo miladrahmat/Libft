@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 11:41:26 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/04/30 11:45:02 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/08 10:33:57 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,3 @@ void	ft_putendl_fd(char *s, int fd)
 	}
 	write(fd, "\n", 1);
 }
-/* 
-int	main()
-{
-	char *str = "Hello World!";
-
-	ft_putendl_fd(str, 1);
-	return (0);
-} */
