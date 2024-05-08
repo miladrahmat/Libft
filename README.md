@@ -10,6 +10,8 @@
   - [Additional functions](#additional-functions)  
 - [Bonus](#bonus)
   - [Bonus functions](#bonus-functions)
+- [Makefile](#makefile)
+- [Installation](#installation)
 
 ## Introduction
 
@@ -19,10 +21,10 @@ The purpose of the project is to understand the way these functions work, to imp
 
 ## Function overview
 
-I redid a set of functions from `libc`, the functions have the same prototypes and implement the same behaviors as the originals. The only difference is their names. They begin with the *ft_* prefix. For instance, **strlen** is **ft_strlen**.
 
 ### Libc functions
 
+This was part 1 of the project, where I redid a set of functions from `libc`, the functions have the same prototypes and implement the same behaviors as the originals. The only difference is their names. They begin with the ***ft_*** prefix. For instance, **strlen** is **ft_strlen**.
 
 | Function name    | Description                                    | Return values                                                           |
 |------------------|------------------------------------------------|-------------------------------------------------------------------------|
@@ -52,6 +54,8 @@ I redid a set of functions from `libc`, the functions have the same prototypes a
 
 ### Additional functions
 
+This was part 2 of the project, where I created some functions that are not included in the `libc` library but will be very useful in future 42 projects.
+
 | Function name    | Description                                    | Return values                                                           |
 |------------------|------------------------------------------------|-------------------------------------------------------------------------|
 |[**ft_substr**](https://github.com/miladrahmat/Libft/blob/master/ft_substr.c)|allocates and returns a substring from the string `s`|returns the substing or **NULL** if the allocation fails|
@@ -68,7 +72,7 @@ I redid a set of functions from `libc`, the functions have the same prototypes a
 
 ## Bonus
 
-The bonus part is for learning to use structs and lists. For this I had to create the following struct in my `libft.h` file:
+The bonus part is for learning to use structs and lists. For this I had to create the following struct in my [libft.h](https://github.com/miladrahmat/Libft/blob/master/libft.h) file:
 ```
 typedef struct s_list
 {
@@ -96,3 +100,23 @@ The members of the `t_list` struct are:
 |[**ft_lstclear**](https://github.com/miladrahmat/Libft/blob/master/ft_lstclear_bonus.c)|deletes and frees the given node and every successor of that node, using the function `del` and `free`||
 |[**ft_lstiter**](https://github.com/miladrahmat/Libft/blob/master/ft_lstiter_bonus.c)|iterates the list `lst` and appllies the function `f` on the content of each node||
 |[**ft_lstmap**](https://github.com/miladrahmat/Libft/blob/master/ft_lstmap_bonus.c)|iterates the list `lst` and applies the function `f` on the content of each node. Creates a new list resulting of the successive applications of the function `f`|returns the new list or **NULL** if the allocation fails|
+
+### Makefile
+
+In this project I've created a [Makefile](https://github.com/miladrahmat/Libft/blob/master/Makefile) to make compilations easier. You can compile the files by simply running `make` in your command line and it will compile the files into `libft.a`. You can run `make clean` to remove the object files from the directory and `make fclean` to remove the object files and the compiled `libft.a` file. You can also run `make re` to re-compile the files if you made any changes.
+
+## Installation
+
+You can test this library by running this in the command line:
+```
+git clone https://github.com/miladrahmat/Libft.git
+cd Libft
+make
+make clean
+```
+If you'd like to include the bonus functions in the library you can also run:
+```
+make bonus
+make clean
+```
+After that you can use the library by simply including `"libft.h"` in your functions.
