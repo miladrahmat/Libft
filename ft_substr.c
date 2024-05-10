@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 12:11:14 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/05/08 10:31:44 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/10 10:52:19 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char			*res;
-	unsigned int	i;
-	unsigned int	s_len;
+	size_t			i;
+	size_t			s_len;
 
 	i = 0;
 	s_len = ft_strlen(s);

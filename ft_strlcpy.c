@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 09:51:55 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/05/08 10:32:31 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/10 10:51:26 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	unsigned int	i;
-	unsigned int	src_size;
+	size_t	i;
+	size_t	src_size;
 
 	i = 0;
 	src_size = ft_strlen((char *)src);

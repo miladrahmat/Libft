@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:29:19 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/05/08 10:58:42 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/10 10:47:11 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned int	i;
+	size_t			i;
 	char			*ptr;
 
 	i = 0;

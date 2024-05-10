@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 14:43:47 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/05/08 10:33:06 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/10 10:50:17 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static size_t	count_char(char *s, char c)
 {
-	unsigned int	count;
-	unsigned int	i;
+	size_t	count;
+	size_t	i;
 
 	count = 0;
 	i = 0;
@@ -33,7 +33,7 @@ static size_t	count_char(char *s, char c)
 
 static size_t	word_len(char *s, char c)
 {
-	unsigned int	len;
+	size_t	len;
 
 	len = 0;
 	while (s[len] != c && s[len] != '\0')
@@ -55,8 +55,8 @@ static char	**free_array(char **array, size_t index)
 
 static char	**create_string(char *s, char c, char **array)
 {
-	unsigned int	i;
-	unsigned int	len;
+	size_t	i;
+	size_t	len;
 
 	i = 0;
 	len = 0;
@@ -81,7 +81,7 @@ static char	**create_string(char *s, char c, char **array)
 
 char	**ft_split(char const *s, char c)
 {
-	unsigned int	size;
+	size_t			size;
 	char			**array;
 
 	if (s == NULL)

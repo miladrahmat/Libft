@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 14:22:35 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/05/08 10:34:12 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/10 10:48:01 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	if (dst == NULL && src == NULL)

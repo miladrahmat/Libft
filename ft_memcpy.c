@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 12:37:40 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/05/08 10:34:17 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/10 10:47:52 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	if (dst == NULL && src == NULL)
