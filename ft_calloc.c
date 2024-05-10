@@ -6,7 +6,7 @@
 /*   By: mrahmat- <mrahmat-@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 16:00:22 by mrahmat-          #+#    #+#             */
-/*   Updated: 2024/05/08 10:35:17 by mrahmat-         ###   ########.fr       */
+/*   Updated: 2024/05/10 11:17:28 by mrahmat-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 
-	if (count > 0 && size > 0 && count > SIZE_MAX / size)
+	if (count > 0 && size > 0 && count > UINT_MAX / size)
 		return (NULL);
 	ptr = (void *)malloc(count * size);
 	if (ptr == NULL)
