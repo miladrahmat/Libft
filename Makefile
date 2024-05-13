@@ -20,12 +20,15 @@ all: $(NAME)
 #The $? means the names of all the files? (if I understood correctly)
 $(NAME): $(OBJECTS)
 		ar rcs $@ $?
-bonus: $(OBJECTS) $(BOBJECTS)
-	@ar rcs $(NAME) $(OBJECTS) $(BOBJECTS)
+bonus: .bonus
+.bonus: $(OBJECTS) $(BOBJECTS)
+	ar rcs $(NAME) $(OBJECTS) $(BOBJECTS)
+	@touch .bonus
 %.o: %.c
 		$(CC) -c $(CFLAGS) $?
 clean:
 		rm -f $(OBJECTS) $(BOBJECTS)
+		rm -f .bonus
 fclean: clean
 		rm -f $(NAME)
 re: fclean all
