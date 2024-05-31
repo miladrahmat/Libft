@@ -1,6 +1,13 @@
 # LIBFT
 
-***The very first individual project in the 42 cursus.***
+<p align="center">
+  <img src="https://github.com/miladrahmat/42-badges/blob/master/badges/libftm.png"><img width="132" alt="Screen Shot 2024-05-31 at 10 22 52 AM" src="https://github.com/miladrahmat/Libft/assets/159012803/0b509311-07b4-4bc8-8474-dc199480fa8b">
+
+</p>
+
+<p align="center">
+The very first individual project in the 42 cursus.
+</p>
 
 ## Content
 
