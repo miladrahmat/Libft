@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-The very first individual project in the 42 cursus.
+<b>The very first individual project in the 42 cursus.</b>
 </p>
 
 ## Content
